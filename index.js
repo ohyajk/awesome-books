@@ -9,7 +9,7 @@ add.addEventListener('click', () => {
   const model = { title: title.value, author: author.value };
   const getBooks1 = JSON.parse(localStorage.getItem('books'));
 
-  if (getBooks1 === undefined) {
+  if (!getBooks1) {
     booksArr.push(model);
     localStorage.setItem('books', JSON.stringify(booksArr));
   } else {
