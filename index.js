@@ -16,7 +16,7 @@ add.addEventListener('click', () => {
     getBooks1.push(model);
     localStorage.setItem('books', JSON.stringify(getBooks1));
   }
-  window.reload();
+  location.reload();
 });
 
 const getBooks = JSON.parse(localStorage.getItem('books'));
@@ -36,6 +36,6 @@ btnRems.forEach((btn) => {
     const getBooks2 = JSON.parse(localStorage.getItem('books'));
     getBooks2.splice(target, 1);
     localStorage.setItem('books', JSON.stringify(getBooks2));
-    window.reload();
+    location.reload();
   });
 });
