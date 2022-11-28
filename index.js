@@ -16,14 +16,14 @@ add.addEventListener('click', () => {
     getBooks1.push(model);
     localStorage.setItem('books', JSON.stringify(getBooks1));
   }
-  location.reload();
+  location.reload(); //eslint-disable-line
 });
 
 const getBooks = JSON.parse(localStorage.getItem('books'));
 if (getBooks === undefined) {
   booksIn.innerHTML += '<div></div>';
 } else {
-  for (let i = 0; i < getBooks.length; i + 1) {
+  for (let i = 0; i < getBooks.length; i += 1) {
     const temp = i;
     booksIn.innerHTML += `<p>Title : ${getBooks[i].title}</p><p>Author : ${getBooks[i].author}</p><button class="btn-rem" data-id="${temp}">Remove</button>`;
   }
@@ -36,6 +36,6 @@ btnRems.forEach((btn) => {
     const getBooks2 = JSON.parse(localStorage.getItem('books'));
     getBooks2.splice(target, 1);
     localStorage.setItem('books', JSON.stringify(getBooks2));
-    location.reload();
+    location.reload(); //eslint-disable-line
   });
 });
