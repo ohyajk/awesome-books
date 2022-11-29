@@ -8,25 +8,27 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>Awesome Book Collection</h1>
 
-    <div >
-        <h2>Books Here :-</h2>
-        <hr/>
-        <div id="booksIn">
-        <!-- append -->
+    <h1 class="h1">All Awesome Book Collection</h1>
+
+    <div class="books">
+        <div class="books-in">
+            <div id="booksIn">
+            <!-- Data -->
+            </div>
         </div>
-        <hr/>
     </div>
-
-    <input type="text"  placeholder="Type Book Title Here..." id="title" required/>
-    <br/>
-    <input type="text" placeholder="Type Author Name Here..." id="author" required/>
-    <br/>
-    <input  type="submit" value="ADD" id="add"/>
-
+    <h2 class="newbook-h2">Add a new Book</h2>
+    <div class="form-wrap">
+        <form class="form">
+            <input class="title" type="text"  placeholder="Type Book Title Here..." id="title" required/>
+            <br/>
+            <input class="author" type="text" placeholder="Type Author Name Here..." id="author" required/>
+            <br/>
+            <input class="add"  type="submit" value="ADD" id="add"/>
+        </form>
+    </div>  
     
-
     <script src="./index.js"></script>
 </body>
 </html>
