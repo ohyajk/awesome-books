@@ -31,7 +31,7 @@ class BooksClass {
     const getBooks = JSON.parse(localStorage.getItem('books'));
 
     if (!getBooks || !getBooks[0]) {
-      divP.innerHTML = `<div class="no-cards">No Books to Show...</div>`;
+      divP.innerHTML = '<div class="no-cards">No Books to Show...</div>';
     } else {
       for (let i = 0; i < getBooks.length; i += 1) {
         const temp = i;
@@ -55,13 +55,12 @@ const addBtn = document.querySelector('#add');
 addBtn.addEventListener('click', () => {
   const title = document.querySelector('#title').value;
   const author = document.querySelector('#author').value;
-  if(title=="" || author == ""){
-    alert('Please fill the required Fields');
-} else {
-  const bookAd = new BooksClass();
-  bookAd.add();
-}
-
+  if(title=="" || author == ""){//eslint-disable-line
+    alert('Please fill the required Fields'); //eslint-disable-line
+  } else {
+    const bookAd = new BooksClass();
+    bookAd.add();
+  }
 });
 
 const booksh = new BooksClass();
