@@ -39,3 +39,10 @@ btnRems.forEach((btn) => {
     location.reload(); //eslint-disable-line
   });
 });
+
+class Refactor{
+    constructor() {
+        this.title:title,
+        this.author:author
+    }
+}
