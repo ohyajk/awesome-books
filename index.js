@@ -26,7 +26,7 @@ class BooksClass {
       document.querySelector('#listSec').style.display = 'flex';
       document.querySelector('#addSec').style.display = 'none';
       document.querySelector('#conSec').style.display = 'none';
-      location.replace('/'); //eslint-disable-line
+      location.reload(); //eslint-disable-line
     }
   }
 
