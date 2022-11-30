@@ -19,11 +19,15 @@ class BooksClass {
     if (!netBooks) {
       booksData.push(book);
       localStorage.setItem('books', JSON.stringify(booksData));
+      location.reload();//eslint-disable-line
     } else {
       netBooks.push(book);
       localStorage.setItem('books', JSON.stringify(netBooks));
+      document.querySelector('#listSec').style.display = 'flex';
+      document.querySelector('#addSec').style.display = 'none';
+      document.querySelector('#conSec').style.display = 'none';
+      location.reload(); //eslint-disable-line
     }
-    location.reload(); //eslint-disable-line
   }
 
   showBooks() { //eslint-disable-line
@@ -76,3 +80,35 @@ allBtns.forEach((btn) => {
     location.reload(); //eslint-disable-line
   });
 });
+
+const listBtn = document.querySelector('#listBtn');
+
+listBtn.addEventListener('click', () => {
+  document.querySelector('#listSec').style.display = 'flex';
+  document.querySelector('#addSec').style.display = 'none';
+  document.querySelector('#conSec').style.display = 'none';
+  window.location.replace('#'); //eslint-disable-line
+});
+
+const adBtn = document.querySelector('#addBtn');
+
+adBtn.addEventListener('click', () => {
+  document.querySelector('#listSec').style.display = 'none';
+  document.querySelector('#addSec').style.display = 'flex';
+  document.querySelector('#conSec').style.display = 'none';
+});
+
+const conBtn = document.querySelector('#conBtn');
+
+conBtn.addEventListener('click', () => {
+  document.querySelector('#listSec').style.display = 'none';
+  document.querySelector('#addSec').style.display = 'none';
+  document.querySelector('#conSec').style.display = 'flex';
+});
+
+const time = new Date();
+
+const timeDate = time.toDateString();
+const timeHr = time.toLocaleTimeString();
+const timeDiv = document.querySelector('#time');
+timeDiv.innerHTML = `${timeDate} ${timeHr}`;

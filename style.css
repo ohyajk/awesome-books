@@ -4,6 +4,63 @@ body {
   font-family: cursive;
 }
 
+.nav {
+  display: flex;
+  border: 2px solid black;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul {
+  display: flex;
+  text-decoration: none;
+  list-style: none;
+  gap: 20px;
+  color: black;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.nav a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav li {
+  text-decoration: none;
+  list-style: none;
+  font-weight: 600;
+  height: 100%;
+}
+
+.hr1 {
+  background-color: black;
+  width: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+#time {
+  text-align: right;
+  padding: 5px 10px;
+}
+
+section {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .books {
   display: flex;
   justify-content: center;
@@ -29,6 +86,14 @@ body {
   border: 2px solid black;
   width: 100px;
   height: 30px;
+}
+
+.cards:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.cards:nth-child(odd) {
+  background-color: #ddd;
 }
 
 .form-wrap {
@@ -67,4 +132,15 @@ body {
   height: 30px;
   align-self: flex-end;
   border: 2px solid black;
+}
+
+#conSec,
+#addSec {
+  display: none;
+}
+
+.footer {
+  border: 2px solid black;
+  padding: 10px 40px;
+  text-align: left;
 }

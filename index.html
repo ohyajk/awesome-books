@@ -4,23 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Awesome Books</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
 
-    <h1 class="h1">All Awesome Book Collection</h1>
+    <!-- Header -->
 
-    <div class="books">
-        <div class="books-in">
-            <div id="booksIn">
-            <!-- Data -->
+    <header>
+        <nav class="nav">
+            <h1>All Awesome Books</h1>
+            <ul>
+                <li><a id="listBtn" href="#">List</a></li>
+                <hr class="hr1"/>
+                <li><a id="addBtn" href="#">Add New</a></li>
+                <hr class="hr1"/>
+                <vr/>
+                <li><a id="conBtn" href="#">Contact</a></li>
+            </ul> 
+        </nav>
+        <div id="time"></div>
+    </header>
+
+    <!-- List Section -->
+
+    <section id="listSec">
+        <h1>All Awesome Book Collection</h1>
+        <div class="books">
+            <div class="books-in">
+                <div class="data" id="booksIn">
+                <!-- Data -->
+                </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- ADD NEW SECTION -->
+
+    <section id="addSec">
     <h2 class="newbook-h2">Add a new Book</h2>
     <div class="form-wrap">
-        <form class="form">
+        <form action="/awesome-books/" class="form">
             <input class="title" type="text"  placeholder="Type Book Title Here..." id="title" required/>
             <br/>
             <input class="author" type="text" placeholder="Type Author Name Here..." id="author" required/>
@@ -28,6 +52,26 @@
             <input class="add"  type="submit" value="ADD" id="add"/>
         </form>
     </div>  
+    </section>
+
+    <!-- CONTACT SECTION -->
+
+    <section id="conSec">
+    <h1 class="h1">Contact Information</h1>
+    <p>Do have any questions or you just want to say "hello" ?</p>
+    <p>You can reach out to us!</p>
+    <ul>
+        <li>Our Email : Jk@mail.com </li>
+        <li>Our Phone Number : +91987654321</li>
+        <li>Our Address : City walk, street No. 12, Abohar PB22, India</li>
+    </ul>
+    </section>
+    
+    <!-- FOOTER -->
+
+    <footer class="footer">
+        Copyright Jk Malethia & Homies 2022
+    </footer>
     
     <script src="./index.js"></script>
 </body>
