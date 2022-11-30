@@ -68,3 +68,9 @@ body {
   align-self: flex-end;
   border: 2px solid black;
 }
+
+.contact-section {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
